@@ -2649,3 +2649,38 @@ body{font-family:var(--body)!important}
   .copy-upi{padding:9px 12px}
 }
 @media(max-width:390px){.passes-mega{font-size:78px}.batch-copy h3{font-size:78px}.upi-row code{font-size:11px}}
+
+/* =========================================================
+   PASS FLOW + ACTIONS — integrated maintenance layer
+   ========================================================= */
+.pass-process{max-width:1240px;margin:0 auto 28px;padding:0 5vw 34px;}
+.pass-process-head{border:1px solid var(--line);background:linear-gradient(135deg,rgba(10,20,48,.92),rgba(3,7,22,.9));padding:34px 38px 28px;}
+.pass-process-head h2{font:700 clamp(44px,5vw,70px)/.86 var(--display);margin:12px 0 14px;color:var(--ink);}
+.pass-process-head p{margin:0;color:#aeb9cc;font:500 16px/1.65 var(--body);max-width:760px;}
+.pass-process-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-top:0;background:rgba(3,7,22,.82);}
+.pass-step{min-height:155px;padding:25px 28px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;}
+.pass-step+.pass-step{border-left:1px solid var(--line);}
+.pass-step-no{font:700 32px/.9 var(--display);color:var(--cyan);}
+.pass-step strong{display:block;color:var(--ink);font:700 13px/1.2 var(--ui);letter-spacing:1.8px;margin-bottom:10px;}
+.pass-step p{margin:0;color:#9eabc1;font:500 14px/1.6 var(--body);}
+.pass-process-note{border:1px solid rgba(255,189,24,.25);border-top:0;background:rgba(255,189,24,.035);padding:13px 18px;color:#aeb9cc;font:500 12px/1.55 var(--body);}
+.pass-process-note span{color:var(--yellow);font:700 10px var(--ui);letter-spacing:1.7px;margin-right:10px;}
+.batch-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.batch-actions .batch-form-btn{margin-top:0;}
+.batch-ticket-btn{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:15px 23px;border:1px solid rgba(22,193,210,.7);background:transparent;color:var(--cyan)!important;border-radius:999px;font:700 10px var(--ui);letter-spacing:1.6px;transition:background .2s ease,color .2s ease,transform .2s ease;}
+.batch-ticket-btn:hover{transform:translateY(-2px);background:var(--cyan);color:#050814!important;}
+.batch-ticket-btn span{font-size:16px;}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+@media(max-width:850px){
+ .pass-process{padding:0 16px 26px;margin-bottom:22px;}
+ .pass-process-head{padding:27px 22px 23px;}
+ .pass-process-head h2{font-size:47px;}
+ .pass-process-head p{font-size:14px;}
+ .pass-process-grid{grid-template-columns:1fr;}
+ .pass-step{min-height:0;padding:21px 22px;}
+ .pass-step+.pass-step{border-left:0;border-top:1px solid var(--line);}
+ .pass-step p{font-size:13px;}
+ .pass-process-note{padding:12px 15px;font-size:11px;}
+ .batch-actions{width:100%;gap:9px;}
+ .batch-actions .batch-form-btn,.batch-actions .batch-ticket-btn{flex:1 1 145px;padding-left:14px;padding-right:14px;}
+}

@@ -50,3 +50,7 @@ The Get Passes page is fully integrated into the existing site structure:
 - UPI copy-to-clipboard behavior is integrated into the existing `app.js`; there is no separate pass JavaScript file.
 - QR placeholders in `passes.html` are intentionally empty. Replace each `.qr-placeholder` with the corresponding QR image when ready.
 - The Pass Form URL is currently `https://forms.gle/749xNzWTr6WxfAj77` and is used directly by the pass buttons.
+
+
+## Get Passes workflow
+The integrated `passes.html` page contains the five batch-specific payment cards. Each batch has its own Google Form and Ticket Portal link. The flow shown to attendees is: payment -> pass form -> payment verification -> Ticket Portal -> download/save pass. The pass is intended to be kept private and safely screenshotted for all three nights; entry is scanned separately each night and the same-night scan cannot be reused.
