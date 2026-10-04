@@ -35,6 +35,7 @@ function renderCategories(){const el=$('#homeCategories');if(!el)return;el.inner
 function setupNav(){const nav=$('#nav');if(nav){const f=()=>nav.classList.toggle('scrolled',scrollY>50);f();addEventListener('scroll',f,{passive:true})}$$('[data-menu-open]').forEach(b=>b.onclick=()=>{const overlay=$('#menuOverlay');if(!overlay)return;overlay.classList.toggle('open');overlay.setAttribute('aria-hidden',overlay.classList.contains('open')?'false':'true')});$('[data-menu-close]')?.addEventListener('click',closeMenu);$('#menuOverlay')?.addEventListener('click',e=>{if(e.target.id==='menuOverlay')closeMenu()});$$('#menuOverlay a').forEach(a=>a.addEventListener('click',closeMenu))}
 function closeMenu(){$('#menuOverlay')?.classList.remove('open');$('#menuOverlay')?.setAttribute('aria-hidden','true')}
 function setupPass(){const link=$('[data-pass-link]');if(link)link.addEventListener('click',e=>{if(!EVENT_REGISTRATION_URL){e.preventDefault();alert('Add your Google registration URL in app.js → EVENT_REGISTRATION_URL.')}})}
+function setupPassCopy(){const toast=$('#copyToast');$$('.copy-upi').forEach(button=>button.addEventListener('click',async()=>{const upi=button.dataset.upi||'';try{await navigator.clipboard.writeText(upi)}catch(e){const input=document.createElement('input');input.value=upi;document.body.appendChild(input);input.select();document.execCommand('copy');input.remove()}const old=button.textContent;button.textContent='COPIED';toast?.classList.add('show');setTimeout(()=>{button.textContent=old;toast?.classList.remove('show')},1400)}))}
 function setupExternalLinks(){const links=$$('[data-external-link]');links.forEach(link=>{const type=link.dataset.externalLink;const url=type==='brochure'?BROCHURE_URL:EVENT_REGISTRATION_URL;if(url)link.href=url;else link.addEventListener('click',e=>{e.preventDefault();alert(type==='brochure'?'Add your Google Drive brochure URL in app.js → BROCHURE_URL.':'Add your Google registration URL in app.js → EVENT_REGISTRATION_URL.')})})}
 function setupDeveloperInstagram(){const link=$('[data-developer-instagram]');if(!link)return;if(DEVELOPER_INSTAGRAM_URL){link.href=DEVELOPER_INSTAGRAM_URL}else{link.addEventListener('click',e=>{e.preventDefault();alert('Add the developer Instagram URL in app.js → DEVELOPER_INSTAGRAM_URL.')})}}
 function setupSpotlightCarousel(){
@@ -277,5 +278,5 @@ function setupCinematicMotion(){
   });
 }
 
-function init(){setupNav();renderCategories();setupPass();setupExternalLinks();setupDeveloperInstagram();setupSpotlightCarousel();setupAnimations();setupParallax();setupCinematicMotion();if($('#eventGrid'))renderEventsPage()}
+function init(){setupNav();renderCategories();setupPass();setupExternalLinks();setupDeveloperInstagram();setupPassCopy();setupSpotlightCarousel();setupAnimations();setupParallax();setupCinematicMotion();if($('#eventGrid'))renderEventsPage()}
 document.addEventListener('DOMContentLoaded',init);

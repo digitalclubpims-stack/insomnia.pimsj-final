@@ -42,3 +42,11 @@ Add the second 16:9 landscape poster as `assets/spotlight/main-landscape-02.png`
 
 ### Developer Instagram
 Set `DEVELOPER_INSTAGRAM_URL` near the top of `app.js` to the developer's Instagram profile URL. The footer Instagram button sits between the “Built by Arnav Bansal (Batch 2022)” and “Digital Club, PiMS” lines.
+
+## Get Passes page
+The Get Passes page is fully integrated into the existing site structure:
+- `passes.html` contains the page markup and batch/UPI data.
+- Pass-page CSS is appended to the existing `styles.css`; there is no separate pass stylesheet.
+- UPI copy-to-clipboard behavior is integrated into the existing `app.js`; there is no separate pass JavaScript file.
+- QR placeholders in `passes.html` are intentionally empty. Replace each `.qr-placeholder` with the corresponding QR image when ready.
+- The Pass Form URL is currently `https://forms.gle/749xNzWTr6WxfAj77` and is used directly by the pass buttons.
