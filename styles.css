@@ -2684,3 +2684,90 @@ body{font-family:var(--body)!important}
  .batch-actions{width:100%;gap:9px;}
  .batch-actions .batch-form-btn,.batch-actions .batch-ticket-btn{flex:1 1 145px;padding-left:14px;padding-right:14px;}
 }
+
+/* =========================================================
+   GET PASSES — AESTHETIC FLOW + SMOOTH MAINTENANCE LAYER
+   ========================================================= */
+.passes-page{background:#030718;color:var(--ink);}
+.passes-page .passes-main{background:
+  radial-gradient(circle at 78% 18%,rgba(34,199,201,.055),transparent 25%),
+  radial-gradient(circle at 12% 68%,rgba(84,45,145,.055),transparent 28%);}
+.passes-page .passes-intro{grid-template-columns:minmax(0,1fr) 25%;min-height:320px;}
+.passes-page .passes-intro-copy{padding:48px 5.2vw;}
+.passes-page .passes-intro-copy h2{font-size:clamp(52px,5.5vw,82px);line-height:.82;margin:16px 0 22px;}
+.passes-page .passes-intro-copy p{font-size:17px;line-height:1.65;max-width:820px;}
+.passes-page .passes-intro-mark{border-left:1px solid var(--line);padding:22px;}
+.passes-page .passes-intro-mark:before{width:132px;height:150px;border-radius:14px;}
+.passes-page .passes-intro-mark img{width:88px;max-height:112px;}
+
+/* Flowchart: visual sequence instead of a plain text list. */
+.pass-process{max-width:1240px;margin:0 auto 34px;padding:0 5vw 20px;}
+.pass-process-head{border:0;background:transparent;padding:20px 0 24px;}
+.pass-process-head h2{font-size:clamp(48px,5.5vw,78px);line-height:.84;letter-spacing:-1px;margin:12px 0 12px;}
+.pass-process-head p{font-size:17px;line-height:1.55;color:#aeb9cc;}
+.pass-flowchart{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr) 54px minmax(0,1fr);align-items:stretch;gap:0;}
+.flow-node{position:relative;min-height:220px;padding:28px 28px 27px;border:1px solid rgba(230,240,255,.14);background:linear-gradient(145deg,rgba(10,20,48,.9),rgba(3,7,22,.94));overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.18);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;}
+.flow-node:before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(34,199,201,.035),transparent 42%,rgba(255,194,26,.025));pointer-events:none;}
+.flow-node:hover{transform:translateY(-4px);border-color:rgba(34,199,201,.45);box-shadow:0 18px 42px rgba(0,0,0,.25);}
+.flow-number{position:absolute;right:18px;top:15px;font:700 46px/.8 var(--display);color:rgba(221,245,255,.10);}
+.flow-icon{position:relative;width:48px;height:48px;display:grid;place-items:center;border:1px solid rgba(34,199,201,.55);color:var(--cyan);font:700 21px var(--ui);margin-bottom:25px;background:rgba(34,199,201,.035);}
+.flow-copy{position:relative;max-width:320px;}
+.flow-copy span{display:block;color:var(--yellow);font:700 9px var(--ui);letter-spacing:2.4px;margin-bottom:8px;}
+.flow-copy strong{display:block;color:var(--ink);font:700 18px/1.05 var(--ui);letter-spacing:1.5px;margin-bottom:12px;}
+.flow-copy p{margin:0;color:#aeb9cc;font:500 14px/1.58 var(--body);}
+.flow-connector{display:grid;place-items:center;color:var(--yellow);position:relative;}
+.flow-connector:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,rgba(34,199,201,.45),rgba(255,194,26,.5));}
+.flow-connector span{position:relative;z-index:1;width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,194,26,.45);background:#050a1a;border-radius:50%;font:700 20px var(--ui);}
+.pass-process-note{margin-top:14px;border:1px solid rgba(255,194,26,.22);background:rgba(255,194,26,.035);padding:14px 18px;color:#aeb9cc;font:500 13px/1.55 var(--body);}
+.pass-process-note span{color:var(--yellow);font:700 9px var(--ui);letter-spacing:2px;margin-right:10px;}
+
+/* Batch cards: stronger hierarchy, cleaner buttons, less visual weight. */
+.batch-list{gap:24px;}
+.batch-card{min-height:500px;content-visibility:auto;contain:layout paint;contain-intrinsic-size:500px;box-shadow:0 16px 40px rgba(0,0,0,.2);}
+.batch-copy{padding:62px 66px;}
+.batch-kicker{font-size:11px;letter-spacing:3.4px;}
+.batch-copy h3{font-size:clamp(110px,9vw,156px);line-height:.7;margin:24px 0 30px;}
+.batch-invite{font-size:19px;line-height:1.68;max-width:650px;}
+.batch-prompt{font-size:15px;line-height:1.55;margin-top:27px;}
+.batch-actions{gap:11px;margin-top:20px;}
+.batch-form-btn,.batch-ticket-btn{min-height:50px;padding:0 24px;border-radius:14px;font-size:10px;letter-spacing:1.8px;box-shadow:0 8px 0 rgba(0,0,0,.12);}
+.batch-form-btn{background:linear-gradient(135deg,#ffc21a,#ff9f1c);}
+.batch-form-btn:hover,.batch-ticket-btn:hover{transform:translateY(-3px);box-shadow:0 11px 0 rgba(0,0,0,.15);}
+.batch-ticket-btn{border:1px solid rgba(34,199,201,.55);background:rgba(34,199,201,.045);color:#c9fbfc!important;}
+.batch-ticket-btn:hover{background:var(--cyan);color:#050814!important;}
+.batch-payment{padding:44px 44px;}
+.qr-label{font-size:10px;letter-spacing:3px;margin-bottom:18px;}
+.qr-placeholder{width:min(320px,100%);background:linear-gradient(145deg,rgba(12,24,52,.58),rgba(3,7,22,.7));}
+.qr-placeholder span{font-size:60px;}
+.upi-row{margin-top:22px;}
+.upi-row small{font-size:9px;letter-spacing:2.6px;}
+.upi-row code{font-size:16px;}
+.copy-upi{min-height:40px;padding:0 16px;border-radius:12px;font-size:9px;transition:background .2s ease,color .2s ease,transform .2s ease;}
+.copy-upi:hover{transform:translateY(-2px);}
+
+@media(max-width:850px){
+  .passes-page .passes-intro{grid-template-columns:1fr;}
+  .passes-page .passes-intro-mark{height:190px;border-left:0;border-top:1px solid var(--line);}
+  .passes-page .passes-intro-mark:before{width:116px;height:136px;}
+  .passes-page .passes-intro-mark img{width:76px;max-height:100px;}
+  .pass-process{padding:0 16px 24px;}
+  .pass-process-head{padding:18px 5px 22px;}
+  .pass-process-head h2{font-size:clamp(45px,13vw,62px);}
+  .pass-process-head p{font-size:14px;}
+  .pass-flowchart{grid-template-columns:1fr;gap:0;}
+  .flow-node{min-height:0;padding:25px 22px 24px;}
+  .flow-connector{height:42px;}
+  .flow-connector:before{left:50%;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,rgba(34,199,201,.45),rgba(255,194,26,.5));}
+  .flow-connector span{width:34px;height:34px;transform:rotate(90deg);}
+  .pass-process-note{font-size:11px;padding:12px 14px;}
+  .batch-card{content-visibility:auto;contain-intrinsic-size:720px;}
+  .batch-copy{padding:38px 27px 31px;}
+  .batch-copy h3{font-size:clamp(88px,24vw,116px);margin:20px 0 24px;}
+  .batch-invite{font-size:15.5px;line-height:1.62;}
+  .batch-prompt{font-size:13px;}
+  .batch-actions .batch-form-btn,.batch-actions .batch-ticket-btn{min-height:50px;box-shadow:0 7px 0 rgba(0,0,0,.11);}
+  .batch-payment{padding:34px 21px 31px;}
+  .qr-placeholder{width:min(280px,78vw);}
+  .upi-row code{font-size:14px;}
+}
+@media(max-width:390px){.batch-actions .batch-form-btn,.batch-actions .batch-ticket-btn{font-size:8.5px;padding:0 12px}.upi-row code{font-size:12px}}
